@@ -34,7 +34,7 @@ export default function LoanForm() {
         };
 
         try {
-            const response = await axios.post("http://localhost:5000/generate-schedule", requestData);
+            const response = await axios.post("https://humblebee-task.onrender.com/generate-schedule", requestData);
             setSchedule(response.data.schedule);
         } catch (error) {
             if (error.response && error.response.data.error) {
